@@ -1,12 +1,12 @@
-import React, {FC} from 'react';
-import {useRouteError, isRouteErrorResponse} from 'react-router-dom'
+import { FC } from "react";
+import { useRouteError, isRouteErrorResponse } from "react-router-dom";
 
-const Error:FC = () => {
-    const error = useRouteError() as Error;
+const Error: FC = () => {
+  const error = useRouteError() as Error;
 
-    if (!isRouteErrorResponse(error)) {
-        return null;
-    }
+  if (!isRouteErrorResponse(error)) {
+    return null;
+  }
 
   return (
     <div>

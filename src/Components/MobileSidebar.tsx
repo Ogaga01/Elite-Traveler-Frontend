@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 
 const MobileSidebar: FC = () => {
