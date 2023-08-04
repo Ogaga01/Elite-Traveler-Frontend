@@ -6,6 +6,7 @@ import Cars from "./Pages/Cars";
 import Car from "./Pages/Car";
 import Airplanes from "./Pages/Airplanes";
 import Airplane from "./Pages/Airplane";
+import Reservations from "./Pages/Reservations";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const App = () => {
         {
           path: "/airplanes/:id",
           element: <Airplane />,
+        },
+        {
+          path: "reservations",
+          element: <Reservations />,
         },
       ],
     },
