@@ -1,68 +1,57 @@
 import { FC } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AiOutlineCar } from "react-icons/ai";
-import { PiAirplaneTakeoff, PiMediumLogoFill } from "react-icons/pi";
-import {
-  TbReservedLine,
-  TbBrandGithubFilled,
-  TbBrandLinkedin,
-  TbBrandTwitterFilled,
-} from "react-icons/tb";
+import { PiAirplaneTakeoff } from "react-icons/pi";
+import { TbReservedLine } from "react-icons/tb";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Sidebar: FC = () => {
+  const listStyle =
+    "h-1/4 w-11/12 ml-auto md:text-xl lg:text-2xl xl:text-3xl transition-all text-yellow-300 hover:text-black hover:bg-yellow-300 px-3 items-center flex";
   return (
-    <div className="h-screen hidden md:static left-0 md:block bg-blue-400 md:w-1/4 lg:w-1/5">
-      <header>
-        Elite
-        <br />
-        Travelers
-      </header>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/cars">
-              Cars <AiOutlineCar />
+    <div className="md:h-screen hidden left-0 md:block bg-blue-400 md:w-1/4 lg:w-1/5">
+      <Header />
+      <nav className="h-2/6 md:mb-28">
+        <ul className="h-full">
+          <li className={listStyle}>
+            <NavLink className="flex items-center space-x-4 w-full" to="/">
+              Home
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/airplanes">
-              Airplanes <PiAirplaneTakeoff />
+          <li className={listStyle}>
+            <NavLink className="flex items-center space-x-4 w-full" to="/cars">
+              <span>Cars</span>
+              <span>
+                <AiOutlineCar />
+              </span>
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/reservations">
-              Reservations <TbReservedLine />
+          <li className={listStyle}>
+            <NavLink
+              className="flex items-center space-x-4 w-full"
+              to="/airplanes"
+            >
+              <span>Airplanes</span>
+              <span>
+                <PiAirplaneTakeoff />
+              </span>
+            </NavLink>
+          </li>
+          <li className={listStyle}>
+            <NavLink
+              className="flex items-center space-x-4 w-full"
+              to="/reservations"
+            >
+              <span>Reservations</span>
+              <span>
+                <TbReservedLine />
+              </span>
             </NavLink>
           </li>
         </ul>
       </nav>
-      <footer>
-        <ul>
-          <li>
-            <Link target="blank" to="https://github.com/Ogaga01">
-              <TbBrandGithubFilled />
-            </Link>
-          </li>
-          <li>
-            <Link target="blank" to="https://www.linkedin.com/in/ogaga-iyara/">
-              <TbBrandLinkedin />
-            </Link>
-          </li>
-          <li>
-            <Link target="blank" to="https://twitter.com/i_ogaga_n">
-              <TbBrandTwitterFilled />
-            </Link>
-          </li>
-          <li>
-            <Link target="blank" to="https://medium.com/@iyaraogaga69">
-              <PiMediumLogoFill />
-            </Link>
-          </li>
-        </ul>
-      </footer>
+      <Footer />
     </div>
   );
 };
