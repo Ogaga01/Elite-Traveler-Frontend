@@ -1,0 +1,29 @@
+@import "mixins";
+@import "variables";
+
+.footer {
+  width: 100%;
+  height: 7vh;
+  bottom: 0;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+
+  &_ul {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+}
+
+.icon {
+  font-size: 5rem;
+  color: $color-primary;
+
+  @include respond(mini-phone) {
+    font-size: 4rem;
+  }
+}

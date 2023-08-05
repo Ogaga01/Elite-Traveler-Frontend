@@ -12,6 +12,8 @@
   background-color: #252525a6;
   position: absolute;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   @include respond(mob-nav) {
     width: 50%;
