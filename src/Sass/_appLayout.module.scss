@@ -1,0 +1,14 @@
+@import "mixins";
+@import "variables";
+
+.layout {
+  height: 100vh;
+
+  &__outlet {
+    @include respond(mob-nav) {
+      height: 100vh;
+      background-color: red;
+      top: 0;
+    }
+  }
+}

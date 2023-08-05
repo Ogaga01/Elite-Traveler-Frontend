@@ -6,35 +6,34 @@ import { PiAirplaneTakeoff } from "react-icons/pi";
 import { TbReservedLine } from "react-icons/tb";
 import Header from "./Header";
 import Footer from "./Footer";
+import styles from './../Sass/_mobileSidebar.module.scss'
 
 const MobileSidebar: FC = () => {
   const [show, setShow] = useState<boolean>(false);
 
   const handleShow = () => {
     setShow(!show);
-  };
-  const listStyle =
-    "h-1/4 w-11/12 ml-auto text-3xl sm:text-4xl transition-all text-yellow-300 hover:text-black hover:bg-yellow-300 px-3 items-center flex";
+  };    
 
   return (
     <>
       <IoMdMenu
-        className="text-5xl mx-4 my-4 md:hidden fixed "
+        className={styles['menu']}
         onClick={handleShow}
       />
       {show && (
-        <div className="absolute w-3/4 h-screen md:hidden bg-blue-400">
+        <div className={styles['sidebar']}>
           <Header />
-          <nav className="h-2/6 mb-72">
-            <ul className="h-full">
-              <li className={listStyle} onClick={handleShow}>
-                <NavLink className="flex items-center space-x-4 w-full" to="/">
+          <nav className={styles['navbar']}>
+            <ul className={styles['navbar_ul']}>
+              <li className={styles['listStyle']} onClick={handleShow}>
+                <NavLink className={styles['']} to="/">
                   Home
                 </NavLink>
               </li>
-              <li className={listStyle} onClick={handleShow}>
+              <li className={styles['listStyle']} onClick={handleShow}>
                 <NavLink
-                  className="flex items-center space-x-4 w-full"
+                  className={styles['']}
                   to="/cars"
                 >
                   <span>Cars</span>
@@ -43,9 +42,9 @@ const MobileSidebar: FC = () => {
                   </span>
                 </NavLink>
               </li>
-              <li className={listStyle} onClick={handleShow}>
+              <li className={styles['listStyle']} onClick={handleShow}>
                 <NavLink
-                  className="flex items-center space-x-4 w-full"
+                  className={styles['']}
                   to="/airplanes"
                 >
                   <span>Airplanes</span>
@@ -54,9 +53,9 @@ const MobileSidebar: FC = () => {
                   </span>
                 </NavLink>
               </li>
-              <li className={listStyle} onClick={handleShow}>
+              <li className={styles['listStyle']} onClick={handleShow}>
                 <NavLink
-                  className="flex items-center space-x-4 w-full"
+                  className={styles['']}
                   to="/reservations"
                 >
                   <span>Reservations</span>

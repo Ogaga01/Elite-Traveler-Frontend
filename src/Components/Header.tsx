@@ -1,9 +1,10 @@
 import { FC } from "react";
 import { AiOutlineStar } from "react-icons/ai";
+import styles from './../Sass/_header.module.scss'
 
 const Header: FC = () => {
   return (
-    <header className="flex h-1/6 bg-slate-600 md:mb-28 text-3xl items-center justify-center text-yellow-300">
+    <header className={styles['header']}>
       <span>Elite</span>
       <span>
         <AiOutlineStar />

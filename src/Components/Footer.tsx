@@ -6,30 +6,30 @@ import {
   TbBrandTwitterFilled,
 } from "react-icons/tb";
 import { PiMediumLogoFill } from "react-icons/pi";
+import styles from './../Sass/_footer.module.scss'
 
 const Footer: FC = () => {
-  const iconClass = "md:text-2xl lg:text-3xl xl:text-4xl text-yellow-300";
   return (
-    <footer className="bottom-0 w-full bg-slate-600 h-20">
-      <ul className="flex items-center justify-between mx-auto h-full w-5/6">
+    <footer className={styles['footer']}>
+      <ul className={styles['footer_ul']}>
         <li>
           <Link target="blank" to="https://github.com/Ogaga01">
-            <TbBrandGithubFilled className={iconClass} />
+            <TbBrandGithubFilled className={styles['icon']} />
           </Link>
         </li>
         <li>
           <Link target="blank" to="https://www.linkedin.com/in/ogaga-iyara/">
-            <TbBrandLinkedin className={iconClass} />
+            <TbBrandLinkedin className={styles['icon']} />
           </Link>
         </li>
         <li>
           <Link target="blank" to="https://twitter.com/i_ogaga_n">
-            <TbBrandTwitterFilled className={iconClass} />
+            <TbBrandTwitterFilled className={styles['icon']} />
           </Link>
         </li>
         <li>
           <Link target="blank" to="https://medium.com/@iyaraogaga69">
-            <PiMediumLogoFill className={iconClass} />
+            <PiMediumLogoFill className={styles['icon']} />
           </Link>
         </li>
       </ul>

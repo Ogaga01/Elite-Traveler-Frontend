@@ -2,13 +2,14 @@ import { FC } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 import MobileSidebar from "../Components/MobileSidebar";
+import styles from './../Sass/_appLayout.module.scss'
 
 const AppLayout: FC = () => {
   return (
-    <div className="md:flex h-screen">
+    <div className={styles['layout']}>
       <MobileSidebar />
       <Sidebar />
-      <div className="overflow-scroll bg-red-300 static h-screen w-full md:w-3/4 lg:w-4/5 md:bg-yellow-500">
+      <div className={styles['layout__outlet']}>
         <Outlet />
       </div>
     </div>
