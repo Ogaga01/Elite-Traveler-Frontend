@@ -25,5 +25,6 @@
 
   @include respond(mini-phone) {
     font-size: 4rem;
+    font-weight: 300;
   }
 }

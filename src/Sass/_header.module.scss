@@ -1,0 +1,16 @@
+@import "mixins";
+@import "variables";
+
+.header {
+  height: 10vh;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  color: $color-primary;
+  padding: 2rem 3rem;
+  justify-content: center;
+
+  @include respond(mini-phone) {
+    font-size: 3rem;
+  }
+}
