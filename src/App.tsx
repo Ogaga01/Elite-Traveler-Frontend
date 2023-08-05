@@ -7,41 +7,44 @@ import Car from "./Pages/Car";
 import Airplanes from "./Pages/Airplanes";
 import Airplane from "./Pages/Airplane";
 import Reservations from "./Pages/Reservations";
+import { homeLoader } from "./Actions/loaders";
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        loader: homeLoader,
+        errorElement: <Error />,
+      },
+      {
+        path: "/cars",
+        element: <Cars />,
+      },
+      {
+        path: "/cars/:id",
+        element: <Car />,
+      },
+      {
+        path: "/airplanes",
+        element: <Airplanes />,
+      },
+      {
+        path: "/airplanes/:id",
+        element: <Airplane />,
+      },
+      {
+        path: "reservations",
+        element: <Reservations />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      element: <AppLayout />,
-      errorElement: <Error />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/cars",
-          element: <Cars />,
-        },
-        {
-          path: "/cars/:id",
-          element: <Car />,
-        },
-        {
-          path: "/airplanes",
-          element: <Airplanes />,
-        },
-        {
-          path: "/airplanes/:id",
-          element: <Airplane />,
-        },
-        {
-          path: "reservations",
-          element: <Reservations />,
-        },
-      ],
-    },
-  ]);
-
   return <RouterProvider router={router}></RouterProvider>;
 };
 

@@ -1,11 +1,11 @@
-import {FC} from 'react';
+import { FC } from "react";
+import { useLoaderData } from "react-router-dom";
 
 const Cars: FC = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const car = useLoaderData();
+  console.log(car);
+  console.log("catrs");
+  return <div>Car</div>;
 };
 
 export default Cars;

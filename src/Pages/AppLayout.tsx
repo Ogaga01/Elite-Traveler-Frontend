@@ -1,15 +1,20 @@
 import { FC } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 import MobileSidebar from "../Components/MobileSidebar";
-import styles from './../Sass/_appLayout.module.scss'
+import styles from "./../Sass/_appLayout.module.scss";
+import Loader from "../Components/Loader";
 
 const AppLayout: FC = () => {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
+
   return (
-    <div className={styles['layout']}>
+    <div className={styles["layout"]}>
       <MobileSidebar />
       <Sidebar />
-      <div className={styles['layout__outlet']}>
+      <div className={styles["layout__outlet"]}>
+        {isLoading && <Loader />}
         <Outlet />
       </div>
     </div>
