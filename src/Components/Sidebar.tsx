@@ -1,24 +1,27 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
-import { AiOutlineCar } from "react-icons/ai";
+import { AiOutlineCar, AiOutlineHome } from "react-icons/ai";
 import { PiAirplaneTakeoff } from "react-icons/pi";
 import { TbReservedLine } from "react-icons/tb";
 import Header from "./Header";
 import Footer from "./Footer";
-import styles from './../Sass/_sidebar.module.scss'
+import styles from "./../Sass/_sidebar.module.scss";
 
 const Sidebar: FC = () => {
   return (
-    <div className={styles['sidebar']}>
+    <div className={styles["sidebar"]}>
       <Header />
-      <nav className={styles['nav']}>
-        <ul className={styles['nav_ul']}>
-          <li className={styles['listStyle']}>
+      <nav className={styles["nav"]}>
+        <ul className={styles["nav_ul"]}>
+          <li className={styles["listStyle"]}>
             <NavLink className="flex items-center space-x-4 w-full" to="/">
-              Home
+              <span>Home</span>
+              <span>
+                <AiOutlineHome />
+              </span>
             </NavLink>
           </li>
-          <li className={styles['listStyle']}>
+          <li className={styles["listStyle"]}>
             <NavLink className="flex items-center space-x-4 w-full" to="/cars">
               <span>Cars</span>
               <span>
@@ -26,7 +29,7 @@ const Sidebar: FC = () => {
               </span>
             </NavLink>
           </li>
-          <li className={styles['listStyle']}>
+          <li className={styles["listStyle"]}>
             <NavLink
               className="flex items-center space-x-4 w-full"
               to="/airplanes"
@@ -37,7 +40,7 @@ const Sidebar: FC = () => {
               </span>
             </NavLink>
           </li>
-          <li className={styles['listStyle']}>
+          <li className={styles["listStyle"]}>
             <NavLink
               className="flex items-center space-x-4 w-full"
               to="/reservations"

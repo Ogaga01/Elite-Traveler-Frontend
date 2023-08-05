@@ -2,7 +2,7 @@
 @import "variables";
 
 .menu {
-  position: absolute;
+  position: fixed;
   font-size: 7rem;
   margin: 3rem;
   @include respond(mob-nav-b) {

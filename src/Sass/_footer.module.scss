@@ -9,6 +9,12 @@
   justify-content: center;
   display: flex;
 
+  @include respond(mob-nav-b) {
+    position: absolute;
+    display: flex;
+    width: 20%;
+  }
+
   &_ul {
     display: flex;
     width: 90%;
@@ -20,7 +26,7 @@
 }
 
 .icon {
-  font-size: 5rem;
+  font-size: 2.5rem;
   color: $color-primary;
 
   @include respond(mini-phone) {
