@@ -13,14 +13,12 @@
   &__outlet {
     @include respond(mob-nav-b) {
       height: 100vh;
-      background-color: red;
       width: 80%;
       overflow: scroll;
     }
 
     @include respond(mob-nav) {
       height: 100vh;
-      background-color: red;
       top: 0;
     }
   }

@@ -7,7 +7,6 @@ import Car from "./Pages/Car";
 import Airplanes from "./Pages/Airplanes";
 import Airplane from "./Pages/Airplane";
 import Reservations from "./Pages/Reservations";
-import { homeLoader } from "./Actions/loaders";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +16,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: homeLoader,
-        errorElement: <Error />,
       },
       {
         path: "/cars",
