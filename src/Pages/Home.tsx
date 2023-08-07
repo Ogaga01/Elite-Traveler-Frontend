@@ -40,17 +40,25 @@ const homeAirplanes: HomeObject[] = [
       "https://www.airpartner.com/media/lrpgq3e0/embraer-phenom-100-1140x980.jpg",
     name: "Embrear Phenom 100",
   },
+  {
+    image:
+      "https://www.airpartner.com/media/lrpgq3e0/embraer-phenom-100-1140x980.jpg",
+    name: "Embrear Phenom 100",
+  },
+  {
+    image:
+      "https://www.airpartner.com/media/lrpgq3e0/embraer-phenom-100-1140x980.jpg",
+    name: "Embrear Phenom 100",
+  },
 ];
-
-const airplanes = homeAirplanes.forEach((airplane) => {
-  return <HomeCard props={airplane} />;
-});
 
 const Home: FC = () => {
   return (
     <div>
       <Carousel containerClass="w-full" responsive={responsive}>
-        {airplanes}
+        {homeAirplanes.map((airplane) => {
+          return <HomeCard props={airplane} />;
+        })}
       </Carousel>
       ;
     </div>
