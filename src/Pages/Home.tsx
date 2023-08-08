@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { HomeObject } from "../types";
 import HomeCard from "../Components/HomeCard";
+import styles from "./../Sass/_home.module.scss";
 
 const responsive = {
   superLargeDesktop: {
@@ -42,26 +43,54 @@ const homeAirplanes: HomeObject[] = [
   },
   {
     image:
-      "https://www.airpartner.com/media/lrpgq3e0/embraer-phenom-100-1140x980.jpg",
-    name: "Embrear Phenom 100",
+      "https://www.airpartner.com/media/i2qb4alc/nextant-400xt-exterior-1140x980.jpg",
+    name: "Nextant 400XT",
+  },
+];
+
+const homeCars: HomeObject[] = [
+  {
+    name: "Rolls-Royce Cullinan",
+    image:
+      "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
   },
   {
+    name: "Rolls-Royce Cullinan",
     image:
-      "https://www.airpartner.com/media/lrpgq3e0/embraer-phenom-100-1140x980.jpg",
-    name: "Embrear Phenom 100",
+      "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
+  },
+  {
+    name: "Rolls-Royce Cullinan",
+    image:
+      "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
+  },
+  {
+    name: "Rolls-Royce Cullinan",
+    image:
+      "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
   },
 ];
 
 const Home: FC = () => {
   return (
-    <div>
-      <Carousel containerClass="w-full" responsive={responsive}>
-        {homeAirplanes.map((airplane) => {
-          return <HomeCard props={airplane} />;
-        })}
-      </Carousel>
-      ;
-    </div>
+    <>
+      <div>
+        <Carousel className={styles["carousel"]} responsive={responsive}>
+          {homeAirplanes.map((airplane) => {
+            return <HomeCard props={airplane} />;
+          })}
+        </Carousel>
+        ;
+      </div>
+      <div>
+        <Carousel className={styles["carousel"]} responsive={responsive}>
+          {homeCars.map((car) => {
+            return <HomeCard props={car} />;
+          })}
+        </Carousel>
+        ;
+      </div>
+    </>
   );
 };
 

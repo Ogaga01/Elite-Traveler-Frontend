@@ -4,6 +4,7 @@ import Sidebar from "../Components/Sidebar";
 import MobileSidebar from "../Components/MobileSidebar";
 import styles from "./../Sass/_appLayout.module.scss";
 import Loader from "../Components/Loader";
+import OutletHeader from "../Components/OutletHeader";
 
 const AppLayout: FC = () => {
   const navigation = useNavigation();
@@ -14,6 +15,7 @@ const AppLayout: FC = () => {
       <MobileSidebar />
       <Sidebar />
       <div className={styles["layout__outlet"]}>
+        <OutletHeader/>
         {isLoading && <Loader />}
         <Outlet />
       </div>
