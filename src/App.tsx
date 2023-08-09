@@ -7,7 +7,7 @@ import Car from "./Pages/Car";
 import Airplanes from "./Pages/Airplanes";
 import Airplane from "./Pages/Airplane";
 import Reservations from "./Pages/Reservations";
-import { airplanesLoader, carsLoader } from "./Actions/loaders";
+import { airplanesLoader, carLoader, carsLoader } from "./Actions/loaders";
 import ReserveCar from "./Pages/ReserveCar";
 import ReserveAirplane from "./Pages/ReserveAirplane";
 
@@ -29,6 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/cars/:id",
         element: <Car />,
+        loader: carLoader
       },
       {
         path: "/airplanes",

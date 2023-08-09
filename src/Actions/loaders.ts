@@ -1,4 +1,4 @@
-import { getAirplanes, getCars } from "./actions";
+import { getAirplanes, getCar, getCars } from "./actions";
 
 export const carsLoader = async () => {
   const cars = await getCars();
@@ -12,3 +12,10 @@ export const airplanesLoader = async () => {
   return airplanes;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const carLoader = async ({ params }: { params: any }) => {
+  const { id } = params;
+  const car = await getCar(id);
+
+  return car;
+};

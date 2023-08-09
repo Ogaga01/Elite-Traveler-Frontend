@@ -15,3 +15,12 @@ export const getAirplanes = async () => {
   const data = await res.json();
   return data;
 };
+
+export const getCar = async (id:string)=>{
+  const res = await fetch(`${API_URL}/cars/${id}`)
+
+  if (!res.ok) throw Error("Failed getting car");
+
+  const data = await res.json();
+  return data;
+}
