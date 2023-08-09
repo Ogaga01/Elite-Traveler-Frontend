@@ -7,6 +7,9 @@ import Car from "./Pages/Car";
 import Airplanes from "./Pages/Airplanes";
 import Airplane from "./Pages/Airplane";
 import Reservations from "./Pages/Reservations";
+import { airplanesLoader, carsLoader } from "./Actions/loaders";
+import ReserveCar from "./Pages/ReserveCar";
+import ReserveAirplane from "./Pages/ReserveAirplane";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,8 @@ const router = createBrowserRouter([
       {
         path: "/cars",
         element: <Cars />,
+        loader: carsLoader,
+        errorElement: <Error />,
       },
       {
         path: "/cars/:id",
@@ -28,13 +33,22 @@ const router = createBrowserRouter([
       {
         path: "/airplanes",
         element: <Airplanes />,
+        loader: airplanesLoader,
       },
       {
         path: "/airplanes/:id",
         element: <Airplane />,
       },
       {
-        path: "reservations",
+        path: "/reservecar",
+        element: <ReserveCar />,
+      },
+      {
+        path: "/reserveairplane",
+        element: <ReserveAirplane />,
+      },
+      {
+        path: "/reservations",
         element: <Reservations />,
       },
     ],

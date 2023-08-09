@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { HomeObject } from "../types";
+import { APIObject } from "../types";
 import HomeCard from "../Components/HomeCard";
 import styles from "./../Sass/_home.module.scss";
 import { Link } from "react-router-dom";
@@ -26,7 +26,7 @@ const responsive = {
   },
 };
 
-const homeAirplanes: HomeObject[] = [
+const homeAirplanes: APIObject[] = [
   {
     image:
       "https://www.airpartner.com/media/sz2dvcns/cessna-citation-mustang-exterior-1140x980.jpg",
@@ -49,7 +49,7 @@ const homeAirplanes: HomeObject[] = [
   },
 ];
 
-const homeCars: HomeObject[] = [
+const homeCars: APIObject[] = [
   {
     name: "Rolls-Royce Cullinan",
     image:

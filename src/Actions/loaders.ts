@@ -1,12 +1,14 @@
 import { getAirplanes, getCars } from "./actions";
 
-export const homeLoader = async () => {
+export const carsLoader = async () => {
   const cars = await getCars();
+
+  return cars;
+};
+
+export const airplanesLoader = async () => {
   const airplanes = await getAirplanes();
 
-  const data = {
-    cars,
-    airplanes,
-  };
-  return data;
+  return airplanes;
 };
+

@@ -25,3 +25,19 @@
     margin-left: 1rem;
   }
 }
+
+.link-button {
+  background-color: green;
+  width: 30%;
+  margin-left: 5%;
+  height: 4rem;
+  display: flex;
+  margin-top: 1rem;
+//   margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 15%;
+  text-transform: uppercase;
+}

@@ -5,6 +5,7 @@
   background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
   background-size: 20% 50%;
   animation: loading 1s infinite linear;
+  z-index: 20;
 }
 
 @keyframes loading {

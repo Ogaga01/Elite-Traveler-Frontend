@@ -1,9 +1,9 @@
 import { FC } from "react";
 import styles from "./../Sass/_homeCard.module.scss";
-import { HomeObject } from "../types";
+import { APIObject } from "../types";
 
 interface Props {
-  props: HomeObject;
+  props: APIObject;
 }
 
 const HomeCard: FC<Props> = ({ props }) => {
