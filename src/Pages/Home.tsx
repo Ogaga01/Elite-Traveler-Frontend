@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import { HomeObject } from "../types";
 import HomeCard from "../Components/HomeCard";
 import styles from "./../Sass/_home.module.scss";
+import { Link } from "react-router-dom";
 
 const responsive = {
   superLargeDesktop: {
@@ -55,42 +56,51 @@ const homeCars: HomeObject[] = [
       "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
   },
   {
-    name: "Rolls-Royce Cullinan",
+    name: "Lamborghini Urus",
     image:
-      "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
+      "https://hips.hearstapps.com/hmg-prod/images/2023-lamborghini-urus-performante-0476-644a6d5d75484.jpg?crop=0.663xw:0.560xh;0.131xw,0.281xh&resize=1200:*",
   },
   {
-    name: "Rolls-Royce Cullinan",
-    image:
-      "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
+    name: "Bugatti Veyron",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Veyron_SS.jpg",
   },
   {
-    name: "Rolls-Royce Cullinan",
+    name: "Range-Rover Velar",
     image:
-      "https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_3_815.jpg",
+      "https://hips.hearstapps.com/hmg-prod/images/2024-land-rover-range-rover-101-1675357794.jpg?crop=0.775xw:0.845xh;0.140xw,0.155xh&resize=1200:*",
   },
 ];
 
 const Home: FC = () => {
   return (
-    <>
-      <div>
+    <div className={styles["home"]}>
+      <div className={styles["home__section"]}>
+        <h1 className={styles["home__heading"]}>
+          Browse Our Collection Of Private Jets
+        </h1>
         <Carousel className={styles["carousel"]} responsive={responsive}>
           {homeAirplanes.map((airplane) => {
             return <HomeCard props={airplane} />;
           })}
         </Carousel>
-        ;
+        <Link className={styles["link-button"]} to="/airplanes">
+          View All Jets
+        </Link>
       </div>
-      <div>
+      <div className={styles["home__section"]}>
+        <h1 className={styles["home__heading"]}>
+          Browse Our Collection Of Luxury Cars
+        </h1>
         <Carousel className={styles["carousel"]} responsive={responsive}>
           {homeCars.map((car) => {
             return <HomeCard props={car} />;
           })}
         </Carousel>
-        ;
+        <Link className={styles["link-button"]} to="/cars">
+          View All Cars
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
 

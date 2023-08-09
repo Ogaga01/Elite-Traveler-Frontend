@@ -15,7 +15,7 @@ const AppLayout: FC = () => {
       <MobileSidebar />
       <Sidebar />
       <div className={styles["layout__outlet"]}>
-        <OutletHeader/>
+        <OutletHeader />
         {isLoading && <Loader />}
         <Outlet />
       </div>
