@@ -7,7 +7,12 @@ import Car from "./Pages/Car";
 import Airplanes from "./Pages/Airplanes";
 import Airplane from "./Pages/Airplane";
 import Reservations from "./Pages/Reservations";
-import { airplanesLoader, carLoader, carsLoader } from "./Actions/loaders";
+import {
+  airplanesLoader,
+  carLoader,
+  carsLoader,
+  signinAction,
+} from "./Actions/loaders";
 import ReserveCar from "./Pages/ReserveCar";
 import ReserveAirplane from "./Pages/ReserveAirplane";
 import SignIn from "./Pages/SignIn";
@@ -57,6 +62,7 @@ const router = createBrowserRouter([
       {
         path: "/sign_in",
         element: <SignIn />,
+        action: signinAction,
       },
       {
         path: "/sign_up",

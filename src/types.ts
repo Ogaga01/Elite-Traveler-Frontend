@@ -21,4 +21,6 @@ export type PlaneAPIObject = {
   seats: number;
   crew: number;
   baggage: number;
-}
+};
+
+export type SignInObject = { [k: string]: string };
