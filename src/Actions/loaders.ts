@@ -1,6 +1,6 @@
 import { redirect } from "react-router-dom";
 import { SignInObject } from "../types";
-import { getAirplanes, getCar, getCars, signin } from "./actions";
+import { getAirplanes, getCar, getCars, signin, signup } from "./actions";
 
 export const carsLoader = async () => {
   const cars = await getCars();
@@ -26,7 +26,15 @@ export const carLoader = async ({ params }: { params: any }) => {
 export const signinAction = async ({ request }: { request: any }) => {
   const formData = await request.formData();
   const data: SignInObject = Object.fromEntries(formData);
-  console.log(data);
   await signin(data);
+  return redirect("/");
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const signupAction = async ({ request }: { request: any }) => {
+  const formData = await request.formData();
+  const data: SignInObject = Object.fromEntries(formData);
+  console.log(data);
+  await signup(data);
   return redirect("/");
 };

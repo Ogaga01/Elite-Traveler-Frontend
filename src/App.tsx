@@ -12,6 +12,7 @@ import {
   carLoader,
   carsLoader,
   signinAction,
+  signupAction,
 } from "./Actions/loaders";
 import ReserveCar from "./Pages/ReserveCar";
 import ReserveAirplane from "./Pages/ReserveAirplane";
@@ -67,6 +68,7 @@ const router = createBrowserRouter([
       {
         path: "/sign_up",
         element: <SignUp />,
+        action: signupAction,
       },
     ],
   },

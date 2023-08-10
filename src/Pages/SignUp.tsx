@@ -43,15 +43,6 @@ const SignUp: FC = () => {
             required
           />
         </div>
-        <div className={styles["form__div"]}>
-          <label className={styles["form__div--label"]}>Confirm Password</label>
-          <input
-            className={styles["form__div--input"]}
-            type="password"
-            name="confirm Password"
-            required
-          />
-        </div>
         <button className={styles["form__button"]}>Sign Up</button>
       </Form>
       <p className={styles["form__para"]}>
