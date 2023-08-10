@@ -10,6 +10,8 @@ import Reservations from "./Pages/Reservations";
 import { airplanesLoader, carLoader, carsLoader } from "./Actions/loaders";
 import ReserveCar from "./Pages/ReserveCar";
 import ReserveAirplane from "./Pages/ReserveAirplane";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/cars/:id",
         element: <Car />,
-        loader: carLoader
+        loader: carLoader,
       },
       {
         path: "/airplanes",
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
       {
         path: "/reservations",
         element: <Reservations />,
+      },
+      {
+        path: "/sign_in",
+        element: <SignIn />,
+      },
+      {
+        path: "/sign_up",
+        element: <SignUp />,
       },
     ],
   },

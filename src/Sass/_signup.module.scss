@@ -1,0 +1,53 @@
+@import "mixins";
+@import "variables";
+
+.sign_in {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 70vh;
+
+  &__div {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    &--label {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    &--input {
+      height: 2.5rem;
+      background-color: lightgray;
+      padding: 1rem;
+      border: none;
+    }
+  }
+
+  &__button {
+    background-color: $color-primary;
+    width: 30%;
+    margin: auto;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    border-radius: 15%;
+  }
+
+  &__para {
+    font-size: 1.7rem;
+
+    &--link {
+      color: $color-primary;
+    }
+  }
+}

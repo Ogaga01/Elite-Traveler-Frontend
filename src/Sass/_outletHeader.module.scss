@@ -24,7 +24,18 @@
   font-weight: 300;
 }
 
-.login {
-  font-size: 1.5rem;
-  font-weight: 300;
+.link-button {
+  background-color: $color-primary;
+  width: 10%;
+  margin-left: 0%;
+  height: 2.5rem;
+  display: flex;
+  // margin-top: 1rem;
+  //   margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: $color-black;
+  font-size: 1.3rem;
+  border-radius: 15%;
+  text-transform: uppercase;
 }
