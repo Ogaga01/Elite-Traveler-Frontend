@@ -19,7 +19,7 @@ export type PlaneAPIObject = {
   name: string;
   price: number;
   size: string;
-  seats: number;
+  seat: number;
   crew: number;
   baggage: number;
 };
