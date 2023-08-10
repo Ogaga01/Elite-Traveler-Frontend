@@ -32,7 +32,7 @@ const Cars: FC = () => {
     <div className={styles['car']}>
       <Carousel className={styles['carousel']} responsive={responsive}>
         {cars.map((car: CarAPIObject) => {
-          return <CarCard props={car} />;
+          return <CarCard props={car} key={car.id}/>;
         })}
       </Carousel>
       ;

@@ -27,6 +27,15 @@ export const getCar = async (id: string) => {
   return data;
 };
 
+export const getAirplane = async (id: string) => {
+  const res = await fetch(`${API_URL}/airplanes/${id}`);
+
+  if (!res.ok) throw Error("Failed getting car");
+
+  const data = await res.json();
+  return data;
+};
+
 export const signin = async (user: SignInObject) => {
   try {
     const res = await fetch(`${API_URL}/users/tokens/sign_in`, {
@@ -84,7 +93,7 @@ export const signup = async (user: SignInObject) => {
 };
 export const logout = async () => {
   await localStorage.removeItem("refresh_token");
-   await localStorage.removeItem("resource_owner");
+  await localStorage.removeItem("resource_owner");
   await localStorage.removeItem("person");
   await localStorage.removeItem("access_token");
   location.reload();

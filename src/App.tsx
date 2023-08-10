@@ -8,6 +8,7 @@ import Airplanes from "./Pages/Airplanes";
 import Airplane from "./Pages/Airplane";
 import Reservations from "./Pages/Reservations";
 import {
+  airplaneLoader,
   airplanesLoader,
   carLoader,
   carsLoader,
@@ -47,7 +48,9 @@ const router = createBrowserRouter([
       {
         path: "/airplanes/:id",
         element: <Airplane />,
+        loader: airplaneLoader,
       },
+
       {
         path: "/reservecar",
         element: <ReserveCar />,

@@ -1,4 +1,5 @@
 export type APIObject = {
+  id: number;
   image: string;
   name: string;
 };
