@@ -1,0 +1,26 @@
+@import "mixins";
+@import "variables";
+
+.layout {
+  height: 100vh;
+  display: flex;
+
+  @include respond(mob-nav) {
+    display: block;
+    width: 100%;
+  }
+
+  &__outlet {
+    @include respond(mob-nav-b) {
+      height: 100vh;
+      width: 80%;
+      overflow: scroll;
+      background-color: grey;
+    }
+
+    @include respond(mob-nav) {
+      height: 100vh;
+      top: 0;
+    }
+  }
+}

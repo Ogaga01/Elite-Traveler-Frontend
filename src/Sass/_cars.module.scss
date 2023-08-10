@@ -1,0 +1,13 @@
+@import "mixins";
+@import "variables";
+
+.carousel {
+  border: 2px solid $color-black;
+}
+
+.car {
+  padding: 2rem;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+}

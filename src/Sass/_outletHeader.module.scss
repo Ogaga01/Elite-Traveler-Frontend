@@ -1,0 +1,41 @@
+@import "mixins";
+@import "variables";
+
+.header {
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  background-color: $color-black;
+  color: $color-primary;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @include respond(mob-nav) {
+    display: none;
+  }
+}
+
+.username {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.link-button {
+  background-color: $color-primary;
+  width: 10%;
+  margin-left: 0%;
+  height: 2.5rem;
+  display: flex;
+  // margin-top: 1rem;
+  //   margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: $color-black;
+  font-size: 1.3rem;
+  border-radius: 15%;
+  text-transform: uppercase;
+}
