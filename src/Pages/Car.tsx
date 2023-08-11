@@ -14,7 +14,7 @@ const Car: FC = () => {
         <h1 className={styles['car__heading']}>{name}</h1>
         <p className={styles['car__about']}>{about}</p>
         <p className={styles['car__price']}>${price}</p>
-        <Link to='/reservecar' className={styles['car__link-button']}>Reserve</Link>
+        <Link to='/reservecar' className={styles['car__link-button']} state={{id, image, name, price}}>Reserve</Link>
       </div>
     </div>
   </div>;

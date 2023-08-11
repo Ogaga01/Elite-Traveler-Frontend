@@ -91,10 +91,30 @@ export const signup = async (user: SignInObject) => {
     throw Error("Failed siging user in");
   }
 };
+
 export const logout = async () => {
   await localStorage.removeItem("refresh_token");
   await localStorage.removeItem("resource_owner");
   await localStorage.removeItem("person");
   await localStorage.removeItem("access_token");
   location.reload();
+};
+
+export const reserveAirplane = async (user: SignInObject) => {
+  try {
+    const res = await fetch(`${API_URL}/users/tokens/airplane_reservations`, {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!res.ok) throw Error();
+
+    const data = await res.json();
+    console.log(data);
+  } catch {
+    throw Error("Failed siging user in");
+  }
 };

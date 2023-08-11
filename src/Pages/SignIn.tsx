@@ -5,7 +5,7 @@ import styles from "./../Sass/_signin.module.scss";
 const SignIn: FC = () => {
   return (
     <div className={styles["sign_in"]}>
-      <Form className={styles["form"]} method="POST">
+      <Form className={styles["form"]} method="POST" action="/sign_in">
         <div className={styles["form__div"]}>
           <label className={styles["form__div--label"]}>Email</label>
           <input

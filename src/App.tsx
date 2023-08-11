@@ -12,6 +12,7 @@ import {
   airplanesLoader,
   carLoader,
   carsLoader,
+  reserveAirplaneAction,
   signinAction,
   signupAction,
 } from "./Actions/loaders";
@@ -58,6 +59,7 @@ const router = createBrowserRouter([
       {
         path: "/reserveairplane",
         element: <ReserveAirplane />,
+        action: reserveAirplaneAction,
       },
       {
         path: "/reservations",
