@@ -67,3 +67,25 @@
     }
   }
 }
+
+.form {
+  display: flex;
+  justify-content: space-between;
+
+  &__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+
+    &--label {
+      color: $color-primary;
+      font-size: 1.2rem;
+    }
+
+    &--input {
+      background-color: lightgray;
+      color: $color-black;
+    }
+  }
+}

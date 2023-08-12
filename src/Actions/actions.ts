@@ -100,11 +100,11 @@ export const logout = async () => {
   location.reload();
 };
 
-export const reserveAirplane = async (user: SignInObject) => {
+export const reserveAirplane = async (airplane: SignInObject) => {
   try {
-    const res = await fetch(`${API_URL}/users/tokens/airplane_reservations`, {
+    const res = await fetch(`${API_URL}/airplane_reservations`, {
       method: "POST",
-      body: JSON.stringify(user),
+      body: JSON.stringify(airplane),
       headers: {
         "Content-Type": "application/json",
       },
@@ -115,6 +115,25 @@ export const reserveAirplane = async (user: SignInObject) => {
     const data = await res.json();
     console.log(data);
   } catch {
-    throw Error("Failed siging user in");
+    throw Error("Failed making reservation");
+  }
+};
+
+export const reserveCar = async (car: SignInObject) => {
+  try {
+    const res = await fetch(`${API_URL}/car_reservations`, {
+      method: "POST",
+      body: JSON.stringify(car),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!res.ok) throw Error();
+
+    const data = await res.json();
+    console.log(data);
+  } catch {
+    throw Error("Failed making reservation");
   }
 };

@@ -29,27 +29,50 @@ const ReserveAirplane: FC = () => {
           </div>
         </div>
       </div>
-      <Form method="POST">
-        <div>
-          <label>Start Date</label>
-          <input type="datetime-local" min={date} name="start_date" />
+      <Form method="POST" className={styles["form"]}>
+        <div className={styles["form__div"]}>
+          <label className={styles["form__div--label"]}>Start Date</label>
+          <input
+            className={styles["form__div--input"]}
+            type="datetime-local"
+            min={date}
+            name="start_date"
+            required
+          />
         </div>
-        <div>
-          <label>End Date</label>
-          <input type="datetime-local" name="end_date" />
+        <div className={styles["form__div"]}>
+          <label className={styles["form__div--label"]}>End Date</label>
+          <input
+            className={styles["form__div--input"]}
+            type="datetime-local"
+            name="end_date"
+            required
+          />
         </div>
-        <div>
-          <label>Location</label>
-          <input type="text" name="location" />
+        <div className={styles["form__div"]}>
+          <label className={styles["form__div--label"]}>Location</label>
+          <input
+            className={styles["form__div--input"]}
+            type="text"
+            name="location"
+            required
+          />
         </div>
-        <div>
-          <label>Destination</label>
-          <input type="text" name="destination" />
+        <div className={styles["form__div"]}>
+          <label className={styles["form__div--label"]}>Destination</label>
+          <input
+            className={styles["form__div--input"]}
+            type="text"
+            name="destination"
+            required
+          />
         </div>
         <input type="hidden" value={id} name="airplane_id" />
         <input type="hidden" value={user.id} name="user_id" />
         <input type="hidden" value={price} name="total_price" />
-        <button>Place Reservation</button>
+        <button className={styles["car__link-button"]}>
+          Place Reservation
+        </button>
       </Form>
     </div>
   );

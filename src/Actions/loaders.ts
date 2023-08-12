@@ -6,6 +6,7 @@ import {
   getCar,
   getCars,
   reserveAirplane,
+  reserveCar,
   signin,
   signup,
 } from "./actions";
@@ -61,4 +62,14 @@ export const reserveAirplaneAction = async ({ request }: { request: any }) => {
   const data: SignInObject = Object.fromEntries(formData);
   console.log(data);
   await reserveAirplane(data);
+  return redirect("/reservations");
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const reserveCarAction = async ({ request }: { request: any }) => {
+  const formData = await request.formData();
+  const data: SignInObject = Object.fromEntries(formData);
+  console.log(data);
+  await reserveCar(data);
+  return redirect("/reservations");
 };
