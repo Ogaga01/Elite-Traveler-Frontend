@@ -1,4 +1,3 @@
-import { redirect } from "react-router-dom";
 import { SignInObject } from "../types";
 
 const API_URL: string = "https://elite-app-backend.onrender.com";
@@ -98,7 +97,7 @@ export const logout = async () => {
   await localStorage.removeItem("resource_owner");
   await localStorage.removeItem("person");
   await localStorage.removeItem("access_token");
-  redirect("/");
+  location.reload();
 };
 
 export const reserveAirplane = async (airplane: SignInObject) => {
@@ -151,14 +150,14 @@ export const deleteReservedAirplane = async (id: number) => {
   await fetch(`${API_URL}/airplane_reservations/${id}`, {
     method: "DELETE",
   });
-  redirect("/");
+  location.reload();
 };
 
 export const deleteReservedCar = async (id: number) => {
   await fetch(`${API_URL}/car_reservations/${id}`, {
     method: "DELETE",
   });
-  redirect("/");
+  location.reload();
 };
 
 export const getReservedCars = async () => {
