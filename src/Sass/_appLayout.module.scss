@@ -19,7 +19,7 @@
     }
 
     @include respond(mob-nav) {
-      height: 100vh;
+      height: auto;
       top: 0;
       background-color: grey;
     }
