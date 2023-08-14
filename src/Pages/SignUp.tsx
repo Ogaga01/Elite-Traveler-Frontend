@@ -1,8 +1,10 @@
 import { FC } from "react";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigation } from "react-router-dom";
 import styles from "./../Sass/_signup.module.scss";
 
 const SignUp: FC = () => {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   return (
     <div className={styles["sign_in"]}>
       <Form className={styles["form"]} method="POST">
@@ -43,7 +45,9 @@ const SignUp: FC = () => {
             required
           />
         </div>
-        <button className={styles["form__button"]}>Sign Up</button>
+        <button disabled={isSubmitting} className={styles["form__button"]}>
+          {isSubmitting ? "Signing Up" : "Sign Up"}
+        </button>
       </Form>
       <p className={styles["form__para"]}>
         Already have an account?{" "}
