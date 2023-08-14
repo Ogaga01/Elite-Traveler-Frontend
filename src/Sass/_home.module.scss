@@ -45,6 +45,11 @@
   border-radius: 15%;
   text-transform: uppercase;
 
+  @include respond(tab-port) {
+    width: 30%;
+    margin-left: 70%;
+  }
+
   @include respond(mob-nav) {
     width: 20%;
     margin-left: 80%;
