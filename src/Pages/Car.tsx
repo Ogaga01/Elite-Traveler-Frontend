@@ -2,12 +2,14 @@ import { FC } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import styles from './../Sass/_car.module.scss'
 import { CarAPIObject } from "../types";
+import BackButton from "../Components/BackButton";
 
 const Car: FC = () => {
   const car: CarAPIObject = useLoaderData();
 
   const {id, name, about, price, image} = car
   return <div className={styles['car']}>
+    <BackButton/>
     <div className={styles['car__container']}>
       <img src={image} className={styles['car__container--image']} />
       <div className={styles['car__container--details']}>

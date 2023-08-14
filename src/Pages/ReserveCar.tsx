@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useLocation, Form } from "react-router-dom";
 import SignIn from "./SignIn";
 import styles from "./../Sass/_car.module.scss";
+import BackButton from "../Components/BackButton";
 
 const ReserveCar: FC = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const ReserveCar: FC = () => {
 
   return (
     <div className={styles["car"]}>
+      <BackButton/>
       <div className={styles["car__container"]}>
         <img src={image} className={styles["car__container--image"]} />
         <div className={styles["car__container--details"]}>

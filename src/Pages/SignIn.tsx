@@ -1,8 +1,11 @@
 import { FC } from "react";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigation } from "react-router-dom";
 import styles from "./../Sass/_signin.module.scss";
 
 const SignIn: FC = () => {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
+
   return (
     <div className={styles["sign_in"]}>
       <Form className={styles["form"]} method="POST" action="/sign_in">
@@ -24,7 +27,9 @@ const SignIn: FC = () => {
             required
           />
         </div>
-        <button className={styles["form__button"]}>Login</button>
+        <button disabled={isSubmitting} className={styles["form__button"]}>
+          {isSubmitting ? "Signing In..." : "Login"}
+        </button>
       </Form>
       <p className={styles["form__para"]}>
         Don't have an account?{" "}

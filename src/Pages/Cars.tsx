@@ -5,6 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import CarCard from "../Components/CarCard";
 import { CarAPIObject } from "../types";
 import styles from './../Sass/_cars.module.scss'
+import BackButton from "../Components/BackButton";
 
 const responsive = {
   superLargeDesktop: {
@@ -30,6 +31,7 @@ const Cars: FC = () => {
   const cars: CarAPIObject[] = useLoaderData();
   return (
     <div className={styles['car']}>
+      <BackButton/>
       <Carousel className={styles['carousel']} responsive={responsive}>
         {cars.map((car: CarAPIObject) => {
           return <CarCard props={car} key={car.id}/>;

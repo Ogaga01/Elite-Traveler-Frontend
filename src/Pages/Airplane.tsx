@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import { PlaneAPIObject } from "../types";
 import styles from "./../Sass/_car.module.scss";
+import BackButton from "../Components/BackButton";
 
 const Airplane: FC = () => {
   const airplane: PlaneAPIObject = useLoaderData();
@@ -9,6 +10,7 @@ const Airplane: FC = () => {
   const { id, about, image, name, price, size, seat, crew, baggage } = airplane;
   return (
     <div className={styles["car"]}>
+      <BackButton/>
       <div className={styles["car__container"]}>
         <img src={image} className={styles["car__container--image"]} />
         <div className={styles["car__container--details"]}>

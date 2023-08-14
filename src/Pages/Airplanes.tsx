@@ -4,6 +4,7 @@ import { PlaneAPIObject } from "../types";
 import Carousel from "react-multi-carousel";
 import AirplaneCard from "../Components/AirplaneCard";
 import styles from './../Sass/_cars.module.scss'
+import BackButton from "../Components/BackButton";
 
 const responsive = {
   superLargeDesktop: {
@@ -67,6 +68,7 @@ const Airplanes: FC = () => {
 
   return (
     <div className={styles['car']}>
+      <BackButton/>
       <div>
         <label>Sort by categories</label>
         <select name="size" onChange={handleOption}>

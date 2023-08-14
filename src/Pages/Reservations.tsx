@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { SignInObject } from "../types";
 import styles from "./../Sass/_reservations.module.scss";
 import { deleteReservedAirplane, deleteReservedCar } from "../Actions/actions";
+import BackButton from "../Components/BackButton";
 
 const Reservations: FC = () => {
   const loader = useLoaderData();
@@ -41,6 +42,7 @@ const Reservations: FC = () => {
 
   return (
     <div className={styles["reserve"]}>
+      <BackButton/>
       <div className={styles["reserve__airplanes"]}>
         <p className={styles["reserve__p"]}>All Reserved Airplanes</p>
         {userReservedAirplanes.length <= 0 ? (
