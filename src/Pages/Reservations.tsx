@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC } from "react";
 import SignIn from "./SignIn";
 import { useLoaderData } from "react-router-dom";
-import { SignInObject } from "../types";
+import { LoaderAPIObject, SignInObject } from "../types";
 import styles from "./../Sass/_reservations.module.scss";
 import { deleteReservedAirplane, deleteReservedCar } from "../Actions/actions";
 import BackButton from "../Components/BackButton";
 
 const Reservations: FC = () => {
-  const loader = useLoaderData();
+  const loader = useLoaderData() as LoaderAPIObject;
 
   const airplanes = loader.airplanes;
   const cars = loader.cars;

@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import { useLoaderData } from "react-router-dom";
 import CarCard from "../Components/CarCard";
 import { CarAPIObject } from "../types";
-import styles from './../Sass/_cars.module.scss'
+import styles from "./../Sass/_cars.module.scss";
 import BackButton from "../Components/BackButton";
 
 const responsive = {
@@ -28,13 +28,13 @@ const responsive = {
 };
 
 const Cars: FC = () => {
-  const cars: CarAPIObject[] = useLoaderData();
+  const cars: CarAPIObject[] = useLoaderData() as CarAPIObject[];
   return (
-    <div className={styles['car']}>
-      <BackButton/>
-      <Carousel className={styles['carousel']} responsive={responsive}>
+    <div className={styles["car"]}>
+      <BackButton />
+      <Carousel className={styles["carousel"]} responsive={responsive}>
         {cars.map((car: CarAPIObject) => {
-          return <CarCard props={car} key={car.id}/>;
+          return <CarCard props={car} key={car.id} />;
         })}
       </Carousel>
       ;
