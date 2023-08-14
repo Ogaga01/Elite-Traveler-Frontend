@@ -21,7 +21,7 @@ const Reservations: FC = () => {
   const userReservedAirplanes = reservedAirplanes.filter((airplane: SignInObject)=>{return airplane.user_id === user.id})
   console.log(userReservedAirplanes, userReservedCars)
 
-  const userAirplane = userReservedAirplanes.forEach((reservedAirplane:SignInObject)=>{console.log(reservedAirplane.airplane_id, 'good')
+  const userAirplane = userReservedAirplanes.find((reservedAirplane:SignInObject)=>{console.log(reservedAirplane.airplane_id, 'good')
     airplanes.find((airplane:SignInObject)=>{console.log(airplane.id, 'bad')
       airplane.id === reservedAirplane.airplane_id
     return airplane})})

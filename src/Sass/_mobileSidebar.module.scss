@@ -4,7 +4,9 @@
 .menu {
   position: fixed;
   font-size: 7rem;
-  margin: 3rem;
+  margin: 2rem;
+  color: $color-primary;
+  z-index: 25;
   @include respond(mob-nav-b) {
     display: none;
   }
@@ -71,4 +73,12 @@
 .active {
   color: $color-black;
   background-color: $color-primary;
+}
+
+.cancel {
+  color: $color-primary;
+  font-size: 7rem;
+  display: flex;
+  justify-content: end;
+  margin-right: 3rem;
 }
