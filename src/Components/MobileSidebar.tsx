@@ -17,15 +17,18 @@ const MobileSidebar: FC = () => {
 
   return (
     <>
-      {!show && <IoMdMenu className={styles["menu"]} onClick={handleShow} />}
+      <div>
+        {!show && <IoMdMenu className={styles["menu"]} onClick={handleShow} />}
+      </div>
       {show && (
         <div className={styles["sidebar"]}>
           <Header />
+          <p className={styles["cancel"]} onClick={handleShow}>&times;</p>
           <nav className={styles["navbar"]}>
             <ul className={styles["navbar_ul"]}>
               <li className={styles["listStyle"]} onClick={handleShow}>
                 <NavLink className={styles["listStyle_link"]} to="/">
-                <span>Home</span>
+                  <span>Home</span>
                   <span>
                     <AiOutlineHome />
                   </span>
@@ -48,7 +51,10 @@ const MobileSidebar: FC = () => {
                 </NavLink>
               </li>
               <li className={styles["listStyle"]} onClick={handleShow}>
-                <NavLink className={styles["listStyle_link"]} to="/reservations">
+                <NavLink
+                  className={styles["listStyle_link"]}
+                  to="/reservations"
+                >
                   <span>Reservations</span>
                   <span>
                     <TbReservedLine />

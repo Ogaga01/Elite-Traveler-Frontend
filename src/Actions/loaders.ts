@@ -5,6 +5,10 @@ import {
   getAirplanes,
   getCar,
   getCars,
+  getReservedAirplanes,
+  getReservedCars,
+  reserveAirplane,
+  reserveCar,
   signin,
   signup,
 } from "./actions";
@@ -52,4 +56,40 @@ export const signupAction = async ({ request }: { request: any }) => {
   console.log(data);
   await signup(data);
   return redirect("/");
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const reserveAirplaneAction = async ({ request }: { request: any }) => {
+  const formData = await request.formData();
+  const data: SignInObject = Object.fromEntries(formData);
+  console.log(data);
+  await reserveAirplane(data);
+  return redirect("/reservations");
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const reserveCarAction = async ({ request }: { request: any }) => {
+  const formData = await request.formData();
+  const data: SignInObject = Object.fromEntries(formData);
+  console.log(data);
+  await reserveCar(data);
+  return redirect("/reservations");
+};
+
+export const reservationLoader = async () => {
+  const airplanes = await getAirplanes();
+  const cars = await getCars();
+  const reservedCars = await getReservedCars();
+  const reservedAirplanes = await getReservedAirplanes();
+
+  const data = {
+    airplanes,
+    cars,
+    reservedCars,
+    reservedAirplanes,
+  };
+
+  console.log(data);
+
+  return data;
 };

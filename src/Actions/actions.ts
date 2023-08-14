@@ -91,10 +91,65 @@ export const signup = async (user: SignInObject) => {
     throw Error("Failed siging user in");
   }
 };
+
 export const logout = async () => {
   await localStorage.removeItem("refresh_token");
   await localStorage.removeItem("resource_owner");
   await localStorage.removeItem("person");
   await localStorage.removeItem("access_token");
   location.reload();
+};
+
+export const reserveAirplane = async (airplane: SignInObject) => {
+  try {
+    const res = await fetch(`${API_URL}/airplane_reservations`, {
+      method: "POST",
+      body: JSON.stringify(airplane),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!res.ok) throw Error();
+
+    const data = await res.json();
+    console.log(data);
+  } catch {
+    throw Error("Failed making reservation");
+  }
+};
+
+export const reserveCar = async (car: SignInObject) => {
+  try {
+    const res = await fetch(`${API_URL}/car_reservations`, {
+      method: "POST",
+      body: JSON.stringify(car),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!res.ok) throw Error();
+
+    const data = await res.json();
+    console.log(data);
+  } catch {
+    throw Error("Failed making reservation");
+  }
+};
+
+export const getReservedAirplanes = async () => {
+  const res = await fetch(`${API_URL}/airplane_reservations`);
+  if (!res.ok) throw Error("Failed getting menu");
+
+  const data = await res.json();
+  return data;
+};
+
+export const getReservedCars = async () => {
+  const res = await fetch(`${API_URL}/car_reservations`);
+  if (!res.ok) throw Error("Failed getting menu");
+
+  const data = await res.json();
+  return data;
 };

@@ -8,13 +8,17 @@ interface Props {
 }
 
 const CarCard: FC<Props> = ({ props }) => {
-  const { id, image, name } = props;
+  const { id, image, about, name, price } = props;
   const stingID = id.toString();
   return (
     <Link to={stingID} className={styles["homeCard"]}>
       <img className={styles["homeCard__image"]} src={image} alt={name} />
       <h2 className={styles["homeCard__header"]}>{name}</h2>
-      <Link to="/reservecar" className={styles['link-button']} state={id}>
+      <Link
+        to="/reservecar"
+        className={styles["link-button"]}
+        state={{ id, image, about, name, price }}
+      >
         Reserve
       </Link>
     </Link>
