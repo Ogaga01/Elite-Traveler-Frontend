@@ -5,7 +5,7 @@ import { CarAPIObject } from "../types";
 import BackButton from "../Components/BackButton";
 
 const Car: FC = () => {
-  const car: CarAPIObject = useLoaderData();
+  const car: CarAPIObject = useLoaderData() as CarAPIObject;
 
   const {id, name, about, price, image} = car
   return <div className={styles['car']}>

@@ -24,4 +24,11 @@ export type PlaneAPIObject = {
   baggage: number;
 };
 
+export type LoaderAPIObject = {
+  cars: SignInObject[];
+  airplanes: SignInObject[];
+  reservedCars: SignInObject[];
+  reservedAirplanes: SignInObject[];
+};
+
 export type SignInObject = { [k: string]: string };

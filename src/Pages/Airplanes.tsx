@@ -30,7 +30,7 @@ const Airplanes: FC = () => {
   const [filterValue, setFilterValue] = useState<string>("");
   console.log(filterValue);
 
-  const airplanes: PlaneAPIObject[] = useLoaderData();
+  const airplanes: PlaneAPIObject[] = useLoaderData() as PlaneAPIObject[];
   console.log(airplanes);
 
   const handleOption = (e: React.ChangeEvent<HTMLSelectElement>) => {

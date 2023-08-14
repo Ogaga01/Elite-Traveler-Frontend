@@ -5,7 +5,7 @@ import styles from "./../Sass/_car.module.scss";
 import BackButton from "../Components/BackButton";
 
 const Airplane: FC = () => {
-  const airplane: PlaneAPIObject = useLoaderData();
+  const airplane: PlaneAPIObject = useLoaderData() as PlaneAPIObject;
 
   const { id, about, image, name, price, size, seat, crew, baggage } = airplane;
   return (
