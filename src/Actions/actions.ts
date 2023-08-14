@@ -137,3 +137,19 @@ export const reserveCar = async (car: SignInObject) => {
     throw Error("Failed making reservation");
   }
 };
+
+export const getReservedAirplanes = async () => {
+  const res = await fetch(`${API_URL}/airplane_reservations`);
+  if (!res.ok) throw Error("Failed getting menu");
+
+  const data = await res.json();
+  return data;
+};
+
+export const getReservedCars = async () => {
+  const res = await fetch(`${API_URL}/car_reservations`);
+  if (!res.ok) throw Error("Failed getting menu");
+
+  const data = await res.json();
+  return data;
+};

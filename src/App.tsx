@@ -12,6 +12,7 @@ import {
   airplanesLoader,
   carLoader,
   carsLoader,
+  reservationLoader,
   reserveAirplaneAction,
   reserveCarAction,
   signinAction,
@@ -66,6 +67,7 @@ const router = createBrowserRouter([
       {
         path: "/reservations",
         element: <Reservations />,
+        loader: reservationLoader,
       },
       {
         path: "/sign_in",

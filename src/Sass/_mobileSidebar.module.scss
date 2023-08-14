@@ -12,10 +12,11 @@
 
 .sidebar {
   background-color: #252525a6;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  z-index: 30;
 
   @include respond(mob-nav) {
     width: 50%;

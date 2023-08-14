@@ -5,6 +5,8 @@ import {
   getAirplanes,
   getCar,
   getCars,
+  getReservedAirplanes,
+  getReservedCars,
   reserveAirplane,
   reserveCar,
   signin,
@@ -72,4 +74,22 @@ export const reserveCarAction = async ({ request }: { request: any }) => {
   console.log(data);
   await reserveCar(data);
   return redirect("/reservations");
+};
+
+export const reservationLoader = async () => {
+  const airplanes = await getAirplanes();
+  const cars = await getCars();
+  const reservedCars = await getReservedCars();
+  const reservedAirplanes = await getReservedAirplanes();
+
+  const data = {
+    airplanes,
+    cars,
+    reservedCars,
+    reservedAirplanes,
+  };
+
+  console.log(data);
+
+  return data;
 };
