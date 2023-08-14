@@ -22,7 +22,7 @@ const Airplane: FC = () => {
             <p className={styles["car__other-p"]}>Baggage: {baggage}</p>
           </div>
           <Link
-            to="/reservecar"
+            to="/reserveairplane"
             className={styles["car__link-button"]}
             state={{ id, name, image, size, price, seat, crew, baggage }}
           >

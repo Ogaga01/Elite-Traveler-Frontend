@@ -146,6 +146,20 @@ export const getReservedAirplanes = async () => {
   return data;
 };
 
+export const deleteReservedAirplane = async (id: number) => {
+  await fetch(`${API_URL}/airplane_reservations/${id}`, {
+    method: "DELETE",
+  });
+  location.reload();
+};
+
+export const deleteReservedCar = async (id: number) => {
+  await fetch(`${API_URL}/car_reservations/${id}`, {
+    method: "DELETE",
+  });
+  location.reload();
+};
+
 export const getReservedCars = async () => {
   const res = await fetch(`${API_URL}/car_reservations`);
   if (!res.ok) throw Error("Failed getting menu");
