@@ -60,9 +60,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Elite Travelers] <a name="about-project">Elite Travelers</a>
-
->
+# 📖 [Elite Travelers] <a name="about-project"></a>
 
 **[Elite Travelers]** is a web application that helps you travel the world in style. Reserve a Private Jet and a Luxury Car for your next trip. Elite travelers app gives you the opportuinity to go places like an Elite, view infomation about our private planes and your favorite cars.
 
@@ -81,8 +79,6 @@ After you're finished please remove all the comments and instructions!
 - SASS
 - Tailwind
 - React Router Dom
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -109,8 +105,6 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[Create A User]**
 - **[Reserve A Car]**
 - **[Reserve A Private Jet]**
@@ -121,8 +115,6 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://elite-travelers.netlify.app/)
 
 - [Backend Repo](https://github.com/Ogaga01/Elite-Backend)
@@ -132,8 +124,6 @@ After you're finished please remove all the comments and instructions!
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -229,8 +219,6 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Ogaga Iyara**
 
 - GitHub: [@githubhandle](https://github.com/Ogaga01)
@@ -244,8 +232,6 @@ Example:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Add Tests]**
 - [ ] **[Add Autocomplete Location]**
@@ -267,8 +253,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project please share it and don't forget to leave a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -277,8 +261,6 @@ If you like this project please share it and don't forget to leave a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
 I would like to thank...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -286,8 +268,6 @@ I would like to thank...
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **[Question_1]**
 
