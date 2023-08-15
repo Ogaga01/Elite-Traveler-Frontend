@@ -53,7 +53,6 @@ export const signinAction = async ({ request }: { request: any }) => {
 export const signupAction = async ({ request }: { request: any }) => {
   const formData = await request.formData();
   const data: SignInObject = Object.fromEntries(formData);
-  console.log(data);
   await signup(data);
   return redirect("/");
 };
@@ -62,7 +61,6 @@ export const signupAction = async ({ request }: { request: any }) => {
 export const reserveAirplaneAction = async ({ request }: { request: any }) => {
   const formData = await request.formData();
   const data: SignInObject = Object.fromEntries(formData);
-  console.log(data);
   await reserveAirplane(data);
   return redirect("/reservations");
 };
@@ -71,7 +69,6 @@ export const reserveAirplaneAction = async ({ request }: { request: any }) => {
 export const reserveCarAction = async ({ request }: { request: any }) => {
   const formData = await request.formData();
   const data: SignInObject = Object.fromEntries(formData);
-  console.log(data);
   await reserveCar(data);
   return redirect("/reservations");
 };
@@ -88,8 +85,5 @@ export const reservationLoader = async () => {
     reservedCars,
     reservedAirplanes,
   };
-
-  console.log(data);
-
   return data;
 };
