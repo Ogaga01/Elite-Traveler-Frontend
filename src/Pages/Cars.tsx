@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -34,10 +33,7 @@ const Cars: FC = () => {
   const cars: CarAPIObject[] = useLoaderData() as CarAPIObject[];
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
-    const {
-      carouselState: { currentSlide },
-    } = rest;
+  const ButtonGroup = ({ next, previous }: any) => {
     return (
       <div
         className="carousel-button-group mb-4  gap-4 flex justify-end 
@@ -58,7 +54,13 @@ const Cars: FC = () => {
   return (
     <div className={styles["car"]}>
       <BackButton />
-      <Carousel arrows={false} renderButtonGroupOutside={true} customButtonGroup={<ButtonGroup />} className={styles["carousel"]} responsive={responsive}>
+      <Carousel
+        arrows={false}
+        renderButtonGroupOutside={true}
+        customButtonGroup={<ButtonGroup />}
+        className={styles["carousel"]}
+        responsive={responsive}
+      >
         {cars.map((car: CarAPIObject) => {
           return <CarCard props={car} key={car.id} />;
         })}
