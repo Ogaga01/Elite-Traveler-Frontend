@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -84,10 +83,7 @@ const homeCars: APIObject[] = [
 
 const Home: FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
-    const {
-      carouselState: { currentSlide },
-    } = rest;
+  const ButtonGroup = ({ next, previous }: any) => {
     return (
       <div
         className="carousel-button-group mb-4  gap-4 flex justify-end 
@@ -105,14 +101,20 @@ const Home: FC = () => {
       </div>
     );
   };
-  
+
   return (
     <div className={styles["home"]}>
       <div className={styles["home__section"]}>
         <h1 className={styles["home__heading"]}>
           Browse Our Collection Of Private Jets
         </h1>
-        <Carousel arrows={false} renderButtonGroupOutside={true} customButtonGroup={<ButtonGroup />} className={styles["carousel"]} responsive={responsive}>
+        <Carousel
+          arrows={false}
+          renderButtonGroupOutside={true}
+          customButtonGroup={<ButtonGroup />}
+          className={styles["carousel"]}
+          responsive={responsive}
+        >
           {homeAirplanes.map((airplane) => {
             return <HomeCard props={airplane} key={airplane.id} />;
           })}
@@ -125,7 +127,13 @@ const Home: FC = () => {
         <h1 className={styles["home__heading"]}>
           Browse Our Collection Of Luxury Cars
         </h1>
-        <Carousel arrows={false} renderButtonGroupOutside={true} customButtonGroup={<ButtonGroup />} className={styles["carousel"]} responsive={responsive}>
+        <Carousel
+          arrows={false}
+          renderButtonGroupOutside={true}
+          customButtonGroup={<ButtonGroup />}
+          className={styles["carousel"]}
+          responsive={responsive}
+        >
           {homeCars.map((car) => {
             return <HomeCard props={car} key={car.id} />;
           })}

@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { PlaneAPIObject } from "../types";
 import Carousel from "react-multi-carousel";
 import AirplaneCard from "../Components/AirplaneCard";
-import styles from './../Sass/_cars.module.scss'
+import styles from "./../Sass/_cars.module.scss";
 import BackButton from "../Components/BackButton";
 import { FiChevronLeft } from "react-icons/fi";
 import { BiChevronRight } from "react-icons/bi";
@@ -67,10 +66,7 @@ const Airplanes: FC = () => {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
-    const {
-      carouselState: { currentSlide },
-    } = rest;
+  const ButtonGroup = ({ next, previous }: any) => {
     return (
       <div
         className="carousel-button-group mb-4  gap-4 flex justify-end 
@@ -90,8 +86,8 @@ const Airplanes: FC = () => {
   };
 
   return (
-    <div className={styles['car']}>
-      <BackButton/>
+    <div className={styles["car"]}>
+      <BackButton />
       <div>
         <label>Sort by categories</label>
         <select name="size" onChange={handleOption}>
@@ -104,9 +100,15 @@ const Airplanes: FC = () => {
           <option value="global jets">Global Jets</option>
         </select>
       </div>
-      <Carousel arrows={false} renderButtonGroupOutside={true} customButtonGroup={<ButtonGroup />} className={styles['carousel']} responsive={responsive}>
+      <Carousel
+        arrows={false}
+        renderButtonGroupOutside={true}
+        customButtonGroup={<ButtonGroup />}
+        className={styles["carousel"]}
+        responsive={responsive}
+      >
         {airplaneSize?.map((jet: PlaneAPIObject) => {
-          return <AirplaneCard props={jet} key={jet.id}/>;
+          return <AirplaneCard props={jet} key={jet.id} />;
         })}
       </Carousel>
     </div>
