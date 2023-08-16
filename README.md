@@ -59,7 +59,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [Elite Travelers] <a name="about-project"></a>
 
-**[Elite Travelers]** is a web application that helps you travel the world in style. Reserve a Private Jet and a Luxury Car for your next trip. Elite travelers app gives you the opportuinity to go places like an Elite, view infomation about our private planes and your favorite cars.
+**[Elite Travelers]** is a web application that helps you travel the world in style. Reserve a Private Jet and a Luxury Car for your next trip. Elite travelers app allows you to go places like an Elite and view information about our private planes and your favorite cars.
 
 ## 🛠 Built With <a name="built-with"></a>
 
