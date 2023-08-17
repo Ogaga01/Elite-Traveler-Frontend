@@ -1,3 +1,6 @@
+@import "mixins";
+@import "variables";
+
 .loader {
   width: 45px;
   aspect-ratio: 0.75;
@@ -20,5 +23,27 @@
   }
   80% {
     background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+  background-color: rgb(226 232 240 / 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 30;
+  overflow-y: none;
+
+  @include respond(mob-nav) {
+    height: 120%;
   }
 }
